@@ -4,7 +4,7 @@ The script does the following:
 1. Query Threat Grid for the existance of each hash in the provided list
 2. If the hash exists collect associated samples and fetch the network streams for each sample
 3. Extract the unique public IPs and Domains from each samples
-4. Output the informaiton to the console and to a file in a RESULTS directory
+4. Output the informaiton to the console and to a files in a RESULTS directory
 
 ### Usage
 The script takes a file as a parameter. The file should have one hash (MD5, SHA1, SHA256) per line.
