@@ -162,10 +162,7 @@ config = configparser.RawConfigParser()
 config.read(configFile)
 
 api_key = config.get('Main', 'api_key')
-api_key = str.rstrip(api_key)
-
-hostName = config.get('Main', 'hostName')
-hostName = str.rstrip(hostName)
+host_name = config.get('Main', 'host_name')
 
 # Get the timestamp of when the script started
 timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H.%M.%S")
@@ -199,7 +196,7 @@ with open(inputFile,'r') as inputList:
     line = 1
     for hash in inputList:
         hash = hash.strip()
-        urlSearch = 'https://{}/api/v2/search/submissions?q={}&api_key={}'.format(hostName,hash,api_key)
+        urlSearch = 'https://{}/api/v2/search/submissions?q={}&api_key={}'.format(host_name,hash,api_key)
         query = query_api(urlSearch)
         if query['data']['current_item_count'] is 0:
             print('Line %d of %d :-(' % (line,lines))
@@ -230,7 +227,7 @@ for hash in JSON_output:
     for SID in JSON_output[hash]:
 
         #/api/v2/samples/SID/analysis/network_streams?api_key=API_KEY
-        urlNetworkStreams = 'https://{}/api/v2/samples/{}/analysis/network_streams?api_key={}'.format(hostName,SID,api_key)
+        urlNetworkStreams = 'https://{}/api/v2/samples/{}/analysis/network_streams?api_key={}'.format(host_name,SID,api_key)
         analysis_elements = query_api(urlNetworkStreams)
         network_streams = analysis_elements['data']['items']
 
