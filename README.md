@@ -1,3 +1,5 @@
+[![Gitter chat](https://img.shields.io/badge/gitter-join%20chat-brightgreen.svg)](https://gitter.im/CiscoSecurity/Threat-Grid "Gitter chat")
+
 ### Indicator to IPs and Domains
 
 The script does the following:
