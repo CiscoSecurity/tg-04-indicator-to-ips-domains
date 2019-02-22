@@ -1,20 +1,22 @@
 [![Gitter chat](https://img.shields.io/badge/gitter-join%20chat-brightgreen.svg)](https://gitter.im/CiscoSecurity/Threat-Grid "Gitter chat")
 
-### Indicator to IPs and Domains
-
+### Indicator to IPs and Domains:
 The script does the following:
 1. Query Threat Grid for the existance of each hash in the provided list
-2. If the hash exists collect associated samples and fetch the network streams for each sample
-3. Extract the unique public IPs and Domains from each samples
+2. If the hash exists, collect associated samples and fetch the network streams for each sample
+3. Extract the unique public IPs and Domains from each sample
 4. Output the informaiton to the console and to a files in a RESULTS directory
 
-### Usage
+### Before using you must update the following:
+- api_key
+
+### Usage:
 The script takes a file as a parameter. The file should have one hash (MD5, SHA1, SHA256) per line.
 ```
 python hash_query.py hashlist.txt
 ```
 
-#### Example script output
+#### Example script output:
 ```
 Line 1 of 1 is a Winner! - 7bdc23cc435305da225148b643fc5273a0bf4e227327e15309fe8d5d98c12c20
 
