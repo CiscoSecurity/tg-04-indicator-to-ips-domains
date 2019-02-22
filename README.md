@@ -16,7 +16,7 @@ The script takes a file as a parameter. The file should have one hash (MD5, SHA1
 python hash_query.py hashlist.txt
 ```
 
-#### Example script output:
+### Example script output:
 ```
 Line 1 of 1 is a Winner! - 7bdc23cc435305da225148b643fc5273a0bf4e227327e15309fe8d5d98c12c20
 
